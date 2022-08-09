@@ -27,7 +27,7 @@ export default function Post() {
   return (
     <div
       className={
-        "flex h-screen w-screen flex-col items-center overflow-auto bg-gray-700 pt-20 pr-5 pl-5"
+        "flex h-screen w-screen flex-col items-center overflow-auto bg-gray-700 pt-20 pb-20 pr-5 pl-5"
       }
     >
       <article>
