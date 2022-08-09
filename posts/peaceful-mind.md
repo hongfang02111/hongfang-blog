@@ -1,6 +1,6 @@
 ---
 title: "Peaceful Mind"
-date: "2022-08-08"
+date: "2022-08-02"
 description: ""
 ---
 
