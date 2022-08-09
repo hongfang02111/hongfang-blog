@@ -28,7 +28,7 @@ const Blog = () => {
     >
       <section>
         <h1 className={"mb-10 items-start text-2xl font-extrabold text-white"}>
-          Read, Think and Code
+          Exploring Learning Practicing Improving
         </h1>
         <ul className={"flex list-none flex-col items-start gap-14 pb-20"}>
           {posts.map((post) => (

@@ -25,7 +25,7 @@ export default function Index() {
         </section>
         <section className={"flex flex-col items-center justify-center gap-10"}>
           <h1 className="font-mono text-2xl text-white md:text-4xl ">
-            Read,Think and Code
+            Exploring Learning Practicing Improving
           </h1>
           <h2 className={"text-2xl text-white md:text-3xl"}>Hongfang Li</h2>
         </section>
