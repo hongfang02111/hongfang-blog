@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { getPostByTitle } from "~/models/post.server";
 
 type Params = {
@@ -12,17 +12,17 @@ export async function loader({ params }: Params) {
   const slug = params.slug;
   return json(
     {
-      post: await getPostByTitle({ slug }),
+      ...(await getPostByTitle({ slug })),
     },
     {
-      headers: { "Cache-Control": "private, max-age=10" },
+      headers: { "Cache-Control": "private, max-age=60" },
     }
   );
 }
 
 export default function Post() {
-  const { post } = useLoaderData();
-  const { title, date, content } = post;
+  const { previousPost, currentPost, nextPost } = useLoaderData();
+  const { title, date, content } = currentPost;
 
   return (
     <div
@@ -42,6 +42,30 @@ export default function Post() {
           className={"prose prose-xl prose-invert mb-20"}
           dangerouslySetInnerHTML={{ __html: content }}
         />
+        <div className={"flex"}>
+          <div className={"w-1/2 text-left "}>
+            {previousPost ? (
+              <Link
+                className="text-pink-200 underline hover:no-underline"
+                to={`/blog/${previousPost.slug}`}
+                prefetch={"intent"}
+              >
+                ← {previousPost.title}
+              </Link>
+            ) : null}
+          </div>
+          <div className={"w-1/2 text-right"}>
+            {nextPost ? (
+              <Link
+                className="text-pink-200 underline hover:no-underline"
+                to={`/blog/${nextPost.slug}`}
+                prefetch={"intent"}
+              >
+                {nextPost.title} →
+              </Link>
+            ) : null}
+          </div>
+        </div>
       </article>
     </div>
   );
