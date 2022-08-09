@@ -37,7 +37,7 @@ export async function getPosts(): Promise<Array<Post>> {
         description,
       };
     })
-    .sort((a, z) => new Date(a.date).valueOf() - new Date(z.date).valueOf());
+    .sort((a, z) => new Date(z.date).valueOf() - new Date(a.date).valueOf());
 }
 
 export async function getPostByTitle({ slug }: Params) {
