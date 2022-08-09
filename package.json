@@ -8,7 +8,7 @@
     "dev": "remix build && run-p dev:*",
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css"
   },
-  "repository": "https://github.com/XiaofengXie16/xiaofeng-blog.git",
+  "repository": "https://github.com/hongfang02111/hongfang-blog.git",
   "dependencies": {
     "@remix-run/node": "^1.6.7",
     "@remix-run/react": "^1.6.7",

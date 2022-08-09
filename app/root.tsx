@@ -11,7 +11,7 @@ import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Xiaofeng Xie",
+  title: "Hongfang Li",
   viewport: "width=device-width,initial-scale=1",
 });
 
