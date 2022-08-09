@@ -31,7 +31,7 @@ export default function Post() {
       }
     >
       <article>
-        <h1 className={"mb-10 items-start text-2xl font-extrabold text-white"}>
+        <h1 className={"mb-10 items-start text-4xl font-extrabold text-white"}>
           Exploring Learning Practicing Improving
         </h1>
         <h1 className={"mb-5 block text-3xl font-bold text-pink-200"}>
