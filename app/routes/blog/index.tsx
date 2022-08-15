@@ -30,10 +30,10 @@ const Blog = () => {
         <Link
           to={"/"}
           className={
-            "mb-10 block items-start text-2xl font-extrabold text-white"
+            "mb-10 block items-start text-4xl font-extrabold text-white"
           }
         >
-          Exploring Learning Practicing Improving
+          The Path to Enightenment
         </Link>
         <ul className={"flex list-none flex-col items-start gap-14 pb-20"}>
           {posts.map((post) => (

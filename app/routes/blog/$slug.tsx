@@ -31,14 +31,6 @@ export default function Post() {
       }
     >
       <article>
-        <Link
-          to={"/blog"}
-          className={
-            "mb-10 block items-start text-4xl font-extrabold text-white"
-          }
-        >
-          Exploring Learning Practicing Improving
-        </Link>
         <h1 className={"mb-5 block text-3xl font-bold text-pink-200"}>
           {title}
         </h1>
